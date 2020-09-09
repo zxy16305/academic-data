@@ -1,0 +1,48 @@
+not contains “浙江制造”团体标准 0122—2016《电压力锅》.pdf
+not contains “浙江制造”团体标准《家用和类似用途插头插座》浙江制造标准.pdf
+not contains “浙江制造”团体标准《钢丝绳芯管状输送带》浙江制造标准.pdf
+not contains “浙江制造”标准 0280—2017《汽车风窗玻璃电动刮水器》.pdf
+not contains “浙江制造”标准 0284—2017《汽车起动机用电磁开关》.pdf
+not contains “浙江制造”标准 0333—201《高容量、环保型LR6、LR03碱性锌-二氧化锰电池》.pdf
+not contains “浙江制造”标准 0406—2018《蒸发冷却式冷水（热泵）一体化机组》 (1).pdf
+not contains 《 汽车圆柱齿轮》浙江制造标准.pdf
+not contains 《亚麻纺纱机械装备》浙江制造标准.pdf
+not contains 《余热锅炉》浙江制造标准.pdf
+not contains 《卧式螺旋卸料沉降离心机》浙江制造标准.pdf
+not contains 《可调谐激光气体分析仪》浙江制造标准.pdf
+not contains 《吸油烟机》浙江制造标准.pdf
+not contains 《塑料注射成型机》浙江制造标准.pdf
+not contains 《地铁隧道轴流通风机》浙江制造标准.pdf
+not contains 《安全防范网络摄像机》浙江制造标准.pdf
+not contains 《实木地板》浙江制造标准.pdf
+not contains 《实木复合地板》浙江制造标准.pdf
+not contains 《小型断路器》浙江制造标准.pdf
+not contains 《小型污水污物潜水电泵》浙江制造标准.pdf
+not contains 《履带式露天潜孔钻车》浙江制造标准.pdf
+not contains 《悬索桥主缆预制平行钢丝索股》浙江制造标准.pdf
+not contains 《挤包护层扭绞型拉索》浙江制造标准.pdf
+not contains 《接入网用弯曲损耗不敏感单模光纤B6.a2》浙江制造标准.pdf
+not contains 《摩托车铝合金车轮》浙江制造标准.pdf
+not contains 《旅行箱包》浙江制造标准.pdf
+not contains 《核电厂用蒸汽压缩循环冷水机组》浙江制造标准.pdf
+not contains 《智能热水循环屏蔽泵》浙江制造标准.pdf
+not contains 《智能型万能式断路器》浙江制造标准.pdf
+not contains 《核电站核岛用 离心式通风机》浙江制造标准.pdf
+not contains 《民用PP-R塑料管材》浙江制造标准.pdf
+not contains 《汽车铝合金车轮》浙江制造标准.pdf
+not contains 《波长段扩展的非色散位移单模光纤》浙江制造标准.pdf
+not contains 《深冷法空气分离设备》浙江制造标准.pdf
+not contains 《电冰箱用全封闭型电动机-压缩机》浙江制造标准.pdf
+not contains 《电除尘器》浙江制造标准.pdf
+not contains 《石油、石化和天然气工业特种用途汽轮机》浙江制造标准.pdf
+not contains 《空气调节器风扇用无刷直流电机》浙江制造标准.pdf
+not contains 《网络硬盘录像机》浙江制造标准.pdf
+not contains 《节能型喷油螺杆空气压缩机》浙江制造标准.pdf
+not contains 《衬衫》浙江制造标准.pdf
+not contains 《轨道交通门用永磁直流电动机》浙江制造标准.pdf
+not contains 《防护鞋底用聚氨酯树脂》浙江制造标准.pdf
+not contains 《防盗安全门》浙江制造标准.pdf
+not contains 《集成灶》浙江制造标准.pdf
+not contains 《风电用玻璃纤维直接无捻粗纱》浙江制造标准.pdf
+not contains 《额定电压220kV（Um=252kV）交联聚乙烯绝缘大长度交流海底电缆 第1部分：试验方法和要求》浙江制造标准.pdf
+not contains 《额定电压220kV（Um=252kV）交联聚乙烯绝缘大长度交流海底电缆 第2部分：技术要求》浙江制造标准.pdf

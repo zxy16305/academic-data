@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <title>堆叠柱状图</title>
+    <style>::-webkit-scrollbar {
+        display: none;
+    }
+
+    html, body {
+        overflow: hidden;
+        height: 100%;
+        margin: 0;
+    }</style>
+</head>
+<body>
+<div id="mountNode"></div>
+<script>/*Fixing iframe window.innerHeight 0 issue in Safari*/
+document.body.clientHeight;</script>
+<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g2-3.5.1/dist/g2.min.js"></script>
+<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.10.1/dist/data-set.min.js"></script>
+<script>
+    var data = [ { cate: '国家标准', year: '2011', count: 24 },
+        { cate: '行业标准', year: '2011', count: 100 },
+        { cate: '行业标准', year: '2012', count: 56 },
+        { cate: '国家标准', year: '2012', count: 26 },
+        { cate: '行业标准', year: '2013', count: 188 },
+        { cate: '国家标准', year: '2013', count: 14 },
+        { cate: '行业标准', year: '2014', count: 75 },
+        { cate: '国家标准', year: '2014', count: 12 },
+        { cate: '国家标准', year: '2015', count: 9 },
+        { cate: '行业标准', year: '2015', count: 117 },
+        { cate: '行业标准', year: '2016', count: 112 },
+        { cate: '国家标准', year: '2016', count: 13 },
+        { cate: '国家标准', year: '2017', count: 40 },
+        { cate: '行业标准', year: '2017', count: 51 },
+        { cate: '行业标准', year: '2018', count: 81 },
+        { cate: '国家标准', year: '2018', count: 11 } ];
+    var ds = new DataSet();
+    var dv = ds.createView().source(data);
+    top.window.dv = dv
+    var chart = new G2.Chart({
+        container: 'mountNode',
+        forceFit: false,
+        // height: window.innerHeight,
+        background: {
+            fill: 'white'
+        },
+        renderer: 'svg'
+
+    });
+    chart.source(dv);
+    chart.intervalStack().position('year*count').color('cate');
+    chart.render();
+    chart.downloadImage()
+
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height">
+    <title>双折线图</title>
+    <style>::-webkit-scrollbar{display:none;}html,body{overflow:hidden;height:100%;margin:0;}</style>
+</head>
+<body>
+<div id="mountNode"></div>
+<script>/*Fixing iframe window.innerHeight 0 issue in Safari*/document.body.clientHeight;</script>
+<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g2-3.5.1/dist/g2.min.js"></script>
+<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.10.1/dist/data-set.min.js"></script>
+<script>
+    var data = [ { cate: '国家标准', year: 2011, count: 80 },
+        { cate: '行业标准', year: 2011, count: 608 },
+        { cate: '行业标准', year: 2012, count: 664 },
+        { cate: '国家标准', year: 2012, count: 106 },
+        { cate: '行业标准', year: 2013, count: 852 },
+        { cate: '国家标准', year: 2013, count: 120 },
+        { cate: '国家标准', year: 2014, count: 132 },
+        { cate: '行业标准', year: 2014, count: 927 },
+        { cate: '国家标准', year: 2015, count: 141 },
+        { cate: '行业标准', year: 2015, count: 1044 },
+        { cate: '行业标准', year: 2016, count: 1156 },
+        { cate: '国家标准', year: 2016, count: 154 },
+        { cate: '国家标准', year: 2017, count: 194 },
+        { cate: '行业标准', year: 2017, count: 1207 },
+        { cate: '行业标准', year: 2018, count: 1288 },
+        { cate: '国家标准', year: 2018, count: 205 } ];
+
+    var chart = new G2.Chart({
+        container: 'mountNode',
+        forceFit: false,
+        background: {
+            fill: 'white'
+        },
+        title: "标准总数曲线",
+        renderer: 'svg'
+        // height: window.innerHeight
+    });
+    chart.source(data, {
+        month: {
+            range: [0, 1]
+        }
+    });
+    chart.tooltip({
+        crosshairs: {
+            type: 'line'
+        }
+    });
+    chart.axis('temperature', {
+        label: {
+            formatter: function formatter(val) {
+                return val + '°C';
+            }
+        }
+    });
+    chart.line().position('year*count').color('cate');
+    chart.point().position('year*count').color('cate').size(4).shape('circle').style({
+        stroke: '#fff',
+        lineWidth: 1
+    });
+    chart.render();
+    chart.downloadImage()
+</script>
+</body>
+</html>
