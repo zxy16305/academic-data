@@ -2,6 +2,8 @@ var xlsx = require('node-xlsx');
 let {range} = require("../StandardStatistics/utils");
 let fs = require("fs");
 
+let countryList = ["南非", "印度", "越南", "尼日利亚", "卢旺达", "希腊", "乌克兰", "奥地利", "巴拿马", "匈牙利", "拉脱维亚", "乌兹别克斯坦", "阿拉伯埃及共和国", "俄罗斯联邦", "马来西亚", "新加坡", "新西兰", "波兰", "土耳其", "大韩民国", "冈比亚", "纳米比亚", "意大利", "乌拉圭", "突尼斯", "以色列", "埃塞俄比亚", "塞尔维亚", "沙特阿拉伯", "阿联酋", "印度尼西亚",]
+
 var excelObj = xlsx.parse('./GDP（以2010为基期）.xls');
 var regPos = /^[0-9]+.?[0-9]*/;
 
@@ -9,7 +11,7 @@ var regPos = /^[0-9]+.?[0-9]*/;
 let answer = {
     name: "",
     data: [
-        ["国家", "年份"]
+        ["序号", "国家", "年份"]
     ]
 }
 
@@ -18,23 +20,26 @@ let sheetAnswer = {
 }
 // sheet
 //
-let set = new Set();
+// let set = new Set();
 let sheet = excelObj[0]
-sheet.data.forEach((it, index) => {
-    if (index > 0) {
-        set.add(it[0])
-    }
-})
+// countryList.forEach(it=> set.add(it))
+// sheet.data.forEach((it, index) => {
+//     if (index > 0) {
+//         set.add(it[0])
+//     }
+// })
 
 
 
-console.log(set)
-let years = [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018]
+// console.log(set)
+let years = [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018]
 // 填充表头和
-set.forEach(it => {
-    years.forEach(year => {
-        answer.data.push([it, year])
-    })
+countryList.forEach((it, index) => {
+    if (countryList.includes(it)) {
+        years.forEach(year => {
+            answer.data.push([index + 1, it, year])
+        })
+    }
 })
 
 
@@ -57,7 +62,7 @@ sheet.data.forEach((it, index) => {
 // 按列填充数据
 answer.data.forEach((line, index) => {
     if (index > 0) {
-        let [country, year] = line
+        let [index, country, year] = line
         let countryLine = sheet.data[countryIndex[country]];
         if (countryLine != null) {
             let data = countryLine[yearIndex[year]];
@@ -72,6 +77,6 @@ answer.data.forEach((line, index) => {
 
 console.log(answer)
 var buffer = xlsx.build([answer]);
-fs.writeFileSync(`面板数据.xlsx`, buffer, {'flag': 'w'});
+fs.writeFileSync(`GDP.xlsx`, buffer, {'flag': 'w'});
 
 // console.log(years)

@@ -25,9 +25,12 @@
     "moment": "^2.24.0",
     "mysql2": "^2.1.0",
     "node-xlsx": "^0.15.0",
+    "rxjs": "^6.6.3",
     "selenium-webdriver": "^4.0.0-alpha.5",
     "sequelize": "^5.21.11",
     "superagent": "^5.1.0",
+    "superagent-proxy": "^2.1.0",
+    "winston": "^3.3.3",
     "xlsx": "^0.15.1"
   }
 }
